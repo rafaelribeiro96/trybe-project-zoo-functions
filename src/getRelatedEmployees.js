@@ -11,7 +11,7 @@ function getRelatedEmployees(managerId) {
     throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
   }
 
-  const employees = [''];
+  const employees = [];
   data.employees.forEach((employ) => {
     if (employ.managers.includes(managerId)) {
       employees.push(`${employ.firstName} ${employ.lastName}`);
